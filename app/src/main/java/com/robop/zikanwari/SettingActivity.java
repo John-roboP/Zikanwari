@@ -13,7 +13,7 @@ public class SettingActivity extends AppCompatActivity {
 
     String str0 ="あり";  //数字で1
     int selected2;  //ありだと1、なし0
-    int selected0; //時間数を入れる
+    //int selected0; //時間数を入れる
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class SettingActivity extends AppCompatActivity {
         Spinner item0 = (Spinner) findViewById(R.id.spinnerZ);  //時限数
         Spinner item1 = (Spinner) findViewById(R.id.spinnerD);  //土曜日表示
 // 選択したアイテムを取得
-        selected0 = (int) item0.getSelectedItem();    //時限数
+        int selected0 = Integer.parseInt((String) item0.getSelectedItem());    //時限数
         String selected1 = (String) item1.getSelectedItem();    //土曜日表示
 
         if(selected1.equals(str0)){
